@@ -1,3 +1,5 @@
+@use "./variables" as *;
+
 @mixin flexBoxMixin($direction, $alignItems, $justifyContent, $gap) {
 	display: flex;
 	flex-direction: $direction;
@@ -23,4 +25,18 @@
 	left: $left;
 	width: $width;
 	aspect-ratio: 1;
+}
+
+@mixin cardPseudoMixin($context, $top, $right, $bottom, $left, $bgColor) {
+	@include flexBoxMixin(row, center, center, none);
+	position: absolute;
+	content: $context;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+	color: $white;
+	background-color: $bgColor;
+	padding: 5px 10px;
+	font-size: 16px;
 }

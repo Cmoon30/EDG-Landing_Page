@@ -1,6 +1,5 @@
 @use "../utilities/mixins" as *;
 @use "../utilities/variables" as *;
-@use "../components/buttons" as *;
 
 nav {
 	@include positionMixin(sticky, 0, none, none, none);

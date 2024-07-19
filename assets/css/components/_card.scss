@@ -1,0 +1,24 @@
+@use "../utilities/mixins" as *;
+@use "../utilities/variables" as *;
+
+.card {
+	@include flexBoxMixin(column, center, center, 5px);
+	position: relative;
+	text-align: center;
+	width: 407px;
+	padding: 0 9px;
+
+	span {
+		font-weight: bold;
+	}
+
+	div {
+		@include flexBoxMixin(row, center, center, 5px);
+		font-size: 16px;
+
+		& > *:nth-child(1) {
+			color: rgba($black, 0.5);
+			text-decoration: line-through;
+		}
+	}
+}
