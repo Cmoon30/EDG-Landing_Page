@@ -1,0 +1,55 @@
+@use "../utilities/mixins" as *;
+@use "../utilities/variables" as *;
+@use "../components/buttons" as *;
+
+nav {
+	@include positionMixin(sticky, 0, none, none, none);
+	@include flexBoxMixin(row, center, space-between, none);
+	width: 100%;
+	height: 79px;
+	padding: 20px 30px;
+	user-select: none;
+	background-color: $white;
+	z-index: 1;
+
+	h1 {
+		position: relative;
+		font-size: 32px;
+		letter-spacing: 5px;
+		font-weight: 800;
+		line-height: 1;
+
+		&::after {
+			content: "";
+			@include positionMixin(absolute, none, none, 5%, none);
+			width: 5px;
+			aspect-ratio: 1;
+			background-color: $red;
+			border-radius: 50%;
+		}
+	}
+
+	.navlinks,
+	.navIcons {
+		@include flexBoxMixin(row, center, center, 10px);
+	}
+
+	.navlinks {
+		font-size: 18px;
+		width: fit-content;
+
+		li {
+			color: rgba($black, 0.5);
+		}
+
+		.active {
+			color: $black;
+			font-weight: bold;
+		}
+	}
+
+	.navIcons img {
+		width: 30px;
+		aspect-ratio: 1;
+	}
+}

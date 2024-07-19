@@ -1,0 +1,49 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+.homeMainBg {
+	height: 576px;
+	user-select: none;
+	position: relative;
+
+	&_img {
+		@include flexBoxMixin(row, none, center, none);
+		width: 1002px;
+		background-color: $gray;
+	}
+
+	&_floatContext {
+		@include positionMixin(absolute, 50%, 10%, none, none);
+		@include flexBoxMixin(column, none, center, 45px);
+		transform: translateY(-50%);
+		text-align: center;
+		width: 500px;
+
+		p {
+			letter-spacing: 6px;
+			font-weight: bold;
+			position: relative;
+
+			&::after {
+				@include pseudoMixin("6.30.99", 50%, 0, none, none, 50px);
+				@include flexBoxMixin(row, center, center, none);
+				transform: translateY(-50%);
+				border-radius: 50%;
+				font-size: 9px;
+				color: $white;
+				background-color: $red;
+				letter-spacing: 0;
+			}
+		}
+
+		h2 {
+			font-size: 51px;
+			font-weight: 800;
+			letter-spacing: 5px;
+		}
+	}
+}
+
+.homeSecondContainer {
+	height: 580px;
+}
