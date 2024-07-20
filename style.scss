@@ -8,24 +8,32 @@
 	color: $black;
 }
 
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
 body {
+	@include positionMixin(relative, none, none, none, 50%);
+	transform: translateX(-50%);
 	height: 100vh;
+	max-width: 1280px;
 	background-color: $white;
 
 	&,
-	.pageContainer {
+	.pageContainer.activePage {
 		@include flexBoxMixin(column, none, none, 10px);
 	}
 
 	.pageContainer {
 		width: 100%;
+		display: none;
 
 		& > * {
 			@include flexBoxMixin(row, none, none, none);
 		}
 	}
-}
-
-li {
-	list-style: none;
 }

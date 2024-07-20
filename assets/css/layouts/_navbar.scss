@@ -11,23 +11,6 @@ nav {
 	background-color: $white;
 	z-index: 1;
 
-	h1 {
-		position: relative;
-		font-size: 32px;
-		letter-spacing: 5px;
-		font-weight: 800;
-		line-height: 1;
-
-		&::after {
-			content: "";
-			@include positionMixin(absolute, none, none, 5%, none);
-			width: 5px;
-			aspect-ratio: 1;
-			background-color: $red;
-			border-radius: 50%;
-		}
-	}
-
 	.navlinks,
 	.navIcons {
 		@include flexBoxMixin(row, center, center, 10px);
@@ -47,7 +30,7 @@ nav {
 		}
 	}
 
-	.navIcons img {
+	.navIcons input {
 		width: 30px;
 		aspect-ratio: 1;
 	}

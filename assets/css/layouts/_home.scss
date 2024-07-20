@@ -7,9 +7,12 @@
 	@include flexBoxMixin(row, none, center, none);
 }
 
+img {
+	user-select: none;
+}
+
 .homeMainBg {
 	height: 576px;
-	user-select: none;
 	position: relative;
 
 	&_img {

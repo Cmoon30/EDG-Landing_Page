@@ -12,7 +12,7 @@
 	</head>
 	<body>
 		<nav>
-			<h1>edg</h1>
+			<h1 class="logo">edg</h1>
 
 			<ul class="navlinks">
 				<li class="active button">HOME</li>
@@ -23,13 +23,19 @@
 			</ul>
 
 			<div class="navIcons">
-				<img class="button" src="assets/imgSource/icons/Search.png" />
-				<img class="button" src="assets/imgSource/icons/Shopping Cart.png" />
+				<input
+					type="image"
+					src="assets/imgSource/icons/Search.png"
+					alt="button" />
+				<input
+					type="image"
+					src="assets/imgSource/icons/Shopping Cart.png"
+					alt="button" />
 			</div>
 		</nav>
 
 		<main>
-			<section class="pageContainer">
+			<section class="pageContainer activePage">
 				<div class="homeMainBg">
 					<section class="homeMainBg_img">
 						<img src="assets/imgSource/product/main_bg.png" alt="" srcset="" />
@@ -71,6 +77,55 @@
 					</section>
 				</div>
 			</section>
+
+			<footer>
+				<div class="logoContainer">
+					<h2 class="logo">edg</h2>
+					<p>
+						COPYRIGHT &#169; 1999. <br />
+						EDG. ALL RIGHT RESERVE .
+					</p>
+				</div>
+
+				<div class="footerLinks">
+					<section class="footerLinks_container">
+						<h3>About</h3>
+						<a href="">About Us</a>
+						<a href="">Offices</a>
+						<a href="">Work with Us</a>
+						<a href="">Our Policies</a>
+					</section>
+
+					<section class="footerLinks_container">
+						<h3>Shopguide</h3>
+						<a href="">Payment</a>
+						<a href="">Gift Card</a>
+						<a href="">Terms & Conditions</a>
+					</section>
+
+					<section class="footerLinks_container">
+						<h3>Newsletter</h3>
+						<span>Subscribe to our Newsletter</span>
+						<div class="footerLinks_input">
+							<input type="text" placeholder="Enter your email" />
+							<input
+								type="image"
+								src="assets/imgSource/icons/Email.png"
+								alt="submit-button" />
+						</div>
+						<div class="footerLinks_socialIcon">
+							<input
+								type="image"
+								src="assets/imgSource/icons/Facebook F.png"
+								alt="button" />
+							<input
+								type="image"
+								src="assets/imgSource/icons/Twitter.png"
+								alt="button" />
+						</div>
+					</section>
+				</div>
+			</footer>
 		</main>
 
 		<script src="assets/node_modules/jquery/dist/jquery.min.js"></script>
