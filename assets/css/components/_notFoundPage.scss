@@ -1,0 +1,12 @@
+@use "../utilities/mixins" as *;
+@use "../utilities/variables" as *;
+
+.notFoundMessage {
+	@include flexBoxMixin(none, center, center, none);
+	height: 100vh;
+	width: 100%;
+	background-color: $white;
+	color: $black;
+	font-size: 24px;
+	font-weight: bold;
+}

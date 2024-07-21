@@ -17,10 +17,8 @@ a {
 }
 
 body {
-	@include positionMixin(relative, none, none, none, 50%);
-	transform: translateX(-50%);
 	height: 100vh;
-	max-width: 1280px;
+	width: 100%;
 	background-color: $white;
 
 	&,
@@ -28,12 +26,18 @@ body {
 		@include flexBoxMixin(column, none, none, 10px);
 	}
 
-	.pageContainer {
-		width: 100%;
-		display: none;
+	main {
+		@include positionMixin(relative, none, none, none, 50%);
+		transform: translateX(-50%);
+		max-width: 1280px;
 
-		& > * {
-			@include flexBoxMixin(row, none, none, none);
+		.pageContainer {
+			width: 100%;
+			display: none;
+
+			& > * {
+				@include flexBoxMixin(row, none, none, none);
+			}
 		}
 	}
 }

@@ -1,4 +1,4 @@
-import { navLinks } from "./assets/js/navbar.js";
+import { navLinks } from "./assets/js/navLink.js";
 
 const functions = () => {
 	navLinks();
