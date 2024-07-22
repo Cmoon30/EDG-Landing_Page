@@ -38,9 +38,30 @@ nav .navlinks .active {
   color: #333333;
   font-weight: bold;
 }
-nav .navIcons input {
+nav .navIcons input[type=image] {
   width: 30px;
   aspect-ratio: 1;
+}
+nav .navIcons .search_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: none;
+  padding: 0 !important;
+}
+nav .navIcons .search_inputText.activeInput {
+  display: block;
+}
+nav .navIcons .search_inputText {
+  display: none;
+  border-radius: 5px;
+  border: 1px solid #333333;
+  padding: 0 0 0 5px;
+  height: 30px;
+}
+nav .navIcons .search_Icon.activeIcon {
+  padding: 3px;
 }
 
 footer {
@@ -317,7 +338,7 @@ img {
   font-weight: bold;
 }
 
-.notFoundMessage {
+.notFoundPage {
   display: flex;
   flex-direction: none;
   align-items: center;

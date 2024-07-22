@@ -30,8 +30,33 @@ nav {
 		}
 	}
 
-	.navIcons input {
-		width: 30px;
-		aspect-ratio: 1;
+	.navIcons {
+		input[type="image"] {
+			width: 30px;
+			aspect-ratio: 1;
+		}
+
+		.search {
+			&_container {
+				@include flexBoxMixin(row, center, center, none);
+				padding: 0 !important;
+			}
+
+			&_inputText.activeInput {
+				display: block;
+			}
+
+			&_inputText {
+				display: none;
+				border-radius: 5px;
+				border: 1px solid $black;
+				padding: 0 0 0 5px;
+				height: 30px;
+			}
+
+			&_Icon.activeIcon {
+				padding: 3px;
+			}
+		}
 	}
 }

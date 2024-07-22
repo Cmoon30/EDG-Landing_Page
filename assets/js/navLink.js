@@ -2,7 +2,7 @@ export const navLinks = () => {
 	const navLinks = $(".navlinks").children();
 	const pageContainers = $(".pageContainer");
 	const loading = $(".loadingIndicator");
-	const notFoundMessage = $(".notFoundMessage");
+	const notFoundPage = $(".notFoundPage");
 
 	let defaultIndex = 0;
 	let isTransitioning = false;
@@ -20,7 +20,7 @@ export const navLinks = () => {
 
 		if (index >= pageContainers.length) {
 			loading.hide();
-			notFoundMessage.show();
+			notFoundPage.show();
 			document.documentElement.scrollTop = 0;
 			pageContainers.hide();
 			isTransitioning = false;
@@ -28,7 +28,7 @@ export const navLinks = () => {
 		}
 
 		loading.show();
-		notFoundMessage.hide();
+		notFoundPage.hide();
 		pageContainers.hide();
 
 		setTimeout(() => {
