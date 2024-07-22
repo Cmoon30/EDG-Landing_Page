@@ -2,7 +2,7 @@
 @use "../utilities/variables" as *;
 
 footer {
-	height: 185px;
+	height: $footerHeight;
 	padding: 30px;
 
 	input {

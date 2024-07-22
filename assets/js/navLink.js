@@ -5,8 +5,16 @@ export const navLinks = () => {
 	const notFoundMessage = $(".notFoundMessage");
 
 	let defaultIndex = 0;
+	let isTransitioning = false;
 
 	const navTab = (index) => {
+		// Check if already transitioning, prevent further clicks
+		if (isTransitioning) {
+			return;
+		}
+
+		isTransitioning = true;
+
 		navLinks.removeClass("active");
 		$(navLinks[index]).addClass("active");
 
@@ -14,21 +22,27 @@ export const navLinks = () => {
 			loading.hide();
 			notFoundMessage.show();
 			document.documentElement.scrollTop = 0;
-			$("body").css("overflow", "hidden");
+			pageContainers.hide();
+			isTransitioning = false;
 			return;
 		}
-		$("body").css("overflow", "hidden");
 
-		notFoundMessage.hide();
 		loading.show();
-		document.documentElement.scrollTop = 0;
+		notFoundMessage.hide();
+		pageContainers.hide();
 
 		setTimeout(() => {
+			loading.hide();
+
 			pageContainers.removeClass("activePage");
 			$(pageContainers[index]).addClass("activePage");
-			loading.hide();
-			$("body").css("overflow", "auto");
+
+			$(pageContainers[index]).show();
+
+			isTransitioning = false;
 		}, 1000);
+
+		document.documentElement.scrollTop = 0;
 	};
 
 	navLinks.on("click", (event) => {

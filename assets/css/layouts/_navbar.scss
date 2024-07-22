@@ -5,7 +5,7 @@ nav {
 	@include positionMixin(sticky, 0, none, none, none);
 	@include flexBoxMixin(row, center, space-between, none);
 	width: 100%;
-	height: 79px;
+	height: $navBarHeight;
 	padding: 20px 30px;
 	user-select: none;
 	background-color: $white;

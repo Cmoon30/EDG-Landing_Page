@@ -3,7 +3,7 @@
 
 .loadingIndicator {
 	@include flexBoxMixin(none, center, center, none);
-	height: 100vh;
+	height: calc(100vh - ($navBarHeight + $footerHeight));
 	width: 100%;
 	background-color: $white;
 	color: $black;
