@@ -3,6 +3,8 @@ export const navLinks = () => {
 	const pageContainers = $(".pageContainer");
 	const loading = $(".loadingIndicator");
 	const notFoundPage = $(".notFoundPage");
+	const searchInput = $(".search_inputText");
+	const searchForm = $(".search_container");
 
 	let defaultIndex = 0;
 	let isTransitioning = false;
@@ -24,12 +26,16 @@ export const navLinks = () => {
 			document.documentElement.scrollTop = 0;
 			pageContainers.hide();
 			isTransitioning = false;
+			searchInput.removeClass("activeInput");
+			searchForm.removeClass("activeIcon");
 			return;
 		}
 
 		loading.show();
 		notFoundPage.hide();
 		pageContainers.hide();
+		searchInput.removeClass("activeInput");
+		searchForm.removeClass("activeIcon");
 
 		setTimeout(() => {
 			loading.hide();
