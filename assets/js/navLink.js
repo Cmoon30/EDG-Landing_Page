@@ -3,17 +3,15 @@ export const navLinks = () => {
 	const pageContainers = $(".pageContainer");
 	const loading = $(".loadingIndicator");
 	const notFoundPage = $(".notFoundPage");
+	const searchIcon = $(".search_Icon");
 	const searchInput = $(".search_inputText");
-	const searchForm = $(".search_container");
 
 	let defaultIndex = 0;
 	let isTransitioning = false;
 
 	const navTab = (index) => {
 		// Check if already transitioning, prevent further clicks
-		if (isTransitioning) {
-			return;
-		}
+		if (isTransitioning) return;
 
 		isTransitioning = true;
 
@@ -27,7 +25,7 @@ export const navLinks = () => {
 			pageContainers.hide();
 			isTransitioning = false;
 			searchInput.removeClass("activeInput");
-			searchForm.removeClass("activeIcon");
+			searchIcon.removeClass("activeIcon");
 			return;
 		}
 
@@ -35,7 +33,7 @@ export const navLinks = () => {
 		notFoundPage.hide();
 		pageContainers.hide();
 		searchInput.removeClass("activeInput");
-		searchForm.removeClass("activeIcon");
+		searchIcon.removeClass("activeIcon");
 
 		setTimeout(() => {
 			loading.hide();

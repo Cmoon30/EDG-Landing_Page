@@ -5,7 +5,7 @@ export const toggleSearch = () => {
 
 	let isInputActive = false;
 
-	const toggleSearch = () => {
+	const toggleSearchContainer = () => {
 		searchInput.toggleClass("activeInput");
 		searchIcon.toggleClass("activeIcon");
 
@@ -22,7 +22,7 @@ export const toggleSearch = () => {
 	};
 
 	searchIcon.on("click", (event) => {
-		toggleSearch();
+		toggleSearchContainer();
 		event.preventDefault();
 	});
 
