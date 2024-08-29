@@ -21,3 +21,5 @@ Welcome to **EDG STORE**! This is a visually appealing and interactive e-commerc
 ## Figma UI Design
 
 Explore the Figma UI design: [EDG STORE Figma Design](<https://www.figma.com/design/4ZFcyrA1dkcPQzmxxe8IlO/EDG(Landing-Page)?node-id=0-1&t=g2MfPeKBsswvPBI1-1>)
+
+![image](https://github.com/user-attachments/assets/2bf2855c-adac-4b8f-ba13-4342bf265f51)
